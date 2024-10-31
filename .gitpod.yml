@@ -1,0 +1,29 @@
+# Gitpod Configuration
+# ver: https://www.gitpod.io/docs/introduction/learn-gitpod/gitpod-yaml
+
+# Uso de imagen de Docker específica
+# ver: https://hub.docker.com/u/gitpod
+image: gitpod/workspace-java-21
+
+# Comandos a ejecutar al inicio del proyecto
+tasks:
+
+  - name: Compila proyecto sin ejecutar pruebas
+    # before se ejecuta siempre
+    # init se ejecuta solo la primera vez
+    before: |
+      sdk install springboot 
+      # sdk install java 23.0.1-graalce < /dev/null
+    init: |
+      if [ -f pom.xml ]; then mvn package -DskipTests; fi
+    command: |
+      if [ -f docker-compose.yml ]; then docker compose up -d; fi
+
+# Extensiones
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - vmware.vscode-spring-boot
+    - vscjava.vscode-spring-boot-dashboard
+    - vscjava.vscode-spring-initializr
+    - rangav.vscode-thunder-client
