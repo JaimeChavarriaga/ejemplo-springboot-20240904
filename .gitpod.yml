@@ -13,6 +13,8 @@ tasks:
     # init se ejecuta solo la primera vez
     before: |
       sdk install springboot 
+      sudo apt-get update; 
+      sudo apt-get install -y httpie
       # sdk install java 23.0.1-graalce < /dev/null
     init: |
       if [ -f pom.xml ]; then mvn package -DskipTests; fi
