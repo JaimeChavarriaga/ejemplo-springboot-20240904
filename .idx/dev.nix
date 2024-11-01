@@ -10,12 +10,15 @@
   packages = [
     pkgs.graalvm-ce
     pkgs.maven
-    pkgs.docker
     pkgs.spring-boot-cli
+    pkgs.httpie
   ];
 
   # Sets environment variables in the workspace
   env = {};
+
+  # Enable IDX services
+  services.docker.enable = true;
 
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
