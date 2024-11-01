@@ -1,3 +1,5 @@
+// Configuración para devcontainers / Github codespaces
+
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/java
 {
@@ -5,13 +7,10 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
-			// Update the VARIANT arg to pick a Java version: 11, 17
-			// Append -bullseye or -buster to pin to an OS version.
-			// Use the -bullseye variants on local arm64/Apple Silicon.
-			"VARIANT": "17",
 			// Options
 			"INSTALL_MAVEN": "true",
 			"INSTALL_GRADLE": "false",
+			"INSTALL_GRAALCE": "true",
 			"NODE_VERSION": "none"
 		}
 	},
@@ -27,7 +26,11 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"vscjava.vscode-java-pack",
-				"Pivotal.vscode-boot-dev-pack"
+				"vmware.vscode-spring-boot",
+				"vscjava.vscode-spring-boot-dashboard",
+				"vscjava.vscode-spring-initializr",
+				"rangav.vscode-thunder-client",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	},
