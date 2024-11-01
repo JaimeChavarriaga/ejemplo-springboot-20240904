@@ -16,7 +16,7 @@
 
   # Sets environment variables in the workspace
   env = {};
-  
+
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -25,6 +25,7 @@
       "vscjava.vscode-spring-boot-dashboard"
       "vscjava.vscode-spring-initializr"
       "rangav.vscode-thunder-client"
+      "GitHub.vscode-github-actions"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file

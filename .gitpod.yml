@@ -27,3 +27,4 @@ vscode:
     - vscjava.vscode-spring-boot-dashboard
     - vscjava.vscode-spring-initializr
     - rangav.vscode-thunder-client
+    - GitHub.vscode-github-actions
